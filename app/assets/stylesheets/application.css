@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .imgholder {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sia-img {
+  position:relative;
+  max-height: 300px;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.goat-img {
+  width: 300px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
