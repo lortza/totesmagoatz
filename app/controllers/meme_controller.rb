@@ -8,4 +8,7 @@ class MemeController < ApplicationController
     @goatpic = @goatgallery.sample
 
   end # goatme
+
+  
+
 end # class
