@@ -1,14 +1,27 @@
-<center><h1>TotesMaGoatz!</h1>
-<p>Find me in app/views/meme/goatme.html.erb</p></center>
+<div class="row">
+  <center><h1>TotesMaGoatz!</h1>
+  <p>Find me in app/views/meme/goatme.html.erb</p></center>
+</div><!--row-->
 
-<div class="imgholder">
-  <div class="sia-img">
-  <%= image_tag @siapic %>
-  </div><!--sia-img-->
-  <div class="goat-img">
-    <%= image_tag @goatpic %>
-  </div><!--goat-img-->
-  <div class="caption">
-    <p><%= @caption %>sample image caption!</p>
-  </div><!--caption-->
-</div><!--imgholder-->
+
+<div class="row">
+  <div class="imgholder">
+    <div class="sia-img">
+    <%= image_tag @siapic %>
+    </div><!--sia-img-->
+    <div class="goat-img">
+      <%= image_tag @goatpic %>
+    </div><!--goat-img-->
+    <%= image_tag "goatlogo.png" , class: "logo" %>
+    <div class="caption">
+      <p><%= @caption %>Sample longer caption about GOATS!! </p> 
+    </div><!--caption-->
+  </div><!--imgholder-->
+</div><!--row-->
+
+<div class="row">
+[Goat Me!]
+[share]
+</div><!--row-->
+
+

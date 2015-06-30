@@ -19,15 +19,22 @@ body {
   /* background-size: cover; */
 }
 
+.row {
+  margin: 50px 0px;
+  clear: both;
+}
+
  .imgholder {
   width: 300px;
   height: 300px;
   margin: 0 auto;
   position: relative;
-  box-shadow: 13px 13px 13px black;
   border: 10px solid white;
   border-bottom: 70px solid white;
   z-index: -1;
+  -moz-box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  -webkit-box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  box-shadow:10px 10px 20px rgba(0,0,0,0.6);
   -ms-transform: rotate(-5deg); /* IE 9 */
   -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
   transform: rotate(-5deg);
@@ -50,8 +57,19 @@ body {
   z-index: 0;
 }
 
+.logo {
+  z-index: 0;
+  float: right;
+  height: 50px;
+  margin-top: 10px;
+}
+
 .caption {
-  text-align: center;
+  width: 75%;
+  margin: -5px 5px 0px 10px;
+  text-align: left;
   font-size: 1.25em;
+  line-height: 100%;
   font-family: 'Permanent Marker', cursive;
+  color: #000F55;
 }
