@@ -2,10 +2,61 @@
 <p>Find me in app/views/meme/goatme.html.erb</p>
 
 <div class="imgholder">
-  <div class="sia-img">
-  <%= image_tag @siapic %>
-  </div><!--sia-img-->
-  <div class="goat-img">
-    <img src="http://img1.exportersindia.com/product_images/bc-full/dir_54/1610623/goat-395326.jpg">
-  </div><!--goat-img-->
+  <canvas id="c" width="300" height="300"></canvas>
+  <div class="buttons">
+  <button id="saveBtn">Save</button>
+  <button id="reloadBtn">Reload</button>
+</div>
 </div><!--imgholder-->
+
+<script type="text/javascript">
+
+  function redrawMeme(image, topLine, bottomLine) {
+    // Get Canvas2DContext
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    // Text attributes
+    ctx.font = "36pt Impact";
+    ctx.textAlign = "center";
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    // Add text
+    if (topLine != null) {
+      ctx.fillText(topLine, canvas.width/2, 45);
+      ctx.strokeText(topLine, canvas.width/2, 45);
+    }
+    if (bottomLine != null) {
+      ctx.fillText(bottomLine, canvas.width/2, canvas.height-10);
+      ctx.strokeText(bottomLine, canvas.width/2, canvas.height-10);
+    }
+  }
+
+  function saveFile() {
+    window.open(document.querySelector('canvas').toDataURL());
+  }
+
+  function reloadPage() {
+    location.reload();
+  }
+
+  var imageGoat = new Image();
+  imageGoat.setAttribute('crossOrigin', 'anonymous');
+  imageGoat.onload = function() {
+    window.imageSrc = this;
+    redrawMeme(window.imageSrc, null, null);
+  }
+  imageGoat.src = '/assets/goat.jpg';
+
+  var imageSia = new Image();
+  imageSia.onload = function() {
+    window.imageSrc = this;
+    redrawMeme(window.imageSrc, null, null);
+  }
+  imageSia.src = '/assets/<%= @siagallery.sample %>';
+
+  document.querySelector('#saveBtn').addEventListener('click', saveFile, false);
+  document.querySelector('#reloadBtn').addEventListener('click', reloadPage, false);
+
+</script>
