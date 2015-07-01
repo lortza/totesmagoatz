@@ -7,12 +7,14 @@ class MemeController < ApplicationController
 
     @goatpic = @goatgallery.sample
 
-  end # goatme
-
-  def goatquote
     @captiongallery = ["Look at these goats!", "The cutest goats!", "Totes Ma Goats!", "I love goats!", "Can you believe these goats??", "Sia <3 this Goat 4eva!", "Goat love...", "Say... GOATS!", "Best goats ever!"]
 
     @caption = @captiongallery.sample
+
+  end # goatme
+
+  def goatquote
+
   end #goatquote
 
 end # class
