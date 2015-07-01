@@ -2,7 +2,7 @@
 <p>Find me in app/views/meme/goatme.html.erb</p>
 
 <div class="imgholder">
-  <canvas id="c" width="300" height="300"></canvas>
+  <canvas id="c" width="322" height="382"></canvas>
   <div class="buttons">
   <button id="saveBtn">Save</button>
   <button id="reloadBtn">Reload</button>
@@ -11,11 +11,21 @@
 
 <script type="text/javascript">
 
+  function drawPolaroid() {
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "black";
+    ctx.fillRect(0,0,325,385);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0,0,320,380);
+  }
+
   function redrawMeme(image, topLine, bottomLine) {
     // Get Canvas2DContext
     var canvas = document.querySelector('canvas');
     var ctx = canvas.getContext("2d");
-    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(image, 10, 10, 300, 300);
+    // ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
     // Text attributes
     ctx.font = "36pt Impact";
     ctx.textAlign = "center";
@@ -40,6 +50,9 @@
   function reloadPage() {
     location.reload();
   }
+
+  // Draw Polaroid background
+  drawPolaroid();
 
   var imageGoat = new Image();
   imageGoat.setAttribute('crossOrigin', 'anonymous');
