@@ -13,8 +13,4 @@ class MemeController < ApplicationController
 
   end # goatme
 
-  def goatquote
-
-  end #goatquote
-
 end # class
