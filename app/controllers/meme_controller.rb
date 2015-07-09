@@ -7,7 +7,7 @@ class MemeController < ApplicationController
 
     @goatpic = @goatgallery.sample
 
-    @captiongallery = ["Look at these goats!", "The cutest goats!", "Totes Ma Goats!", "I love goats!", "Can you believe these goats??", "Sia <3 this Goat 4eva!", "Goat love...", "Say... GOATS!", "Best goats ever!"]
+    @captiongallery = ["Look at these goats!", "The cutest goats!", "Totes Ma Goats!", "I love goats!", "Can you believe these goats??", "Sia hearts THIS Goat forEVER!", "Goat love...", "Say... GOATS!", "Best goats ever!", "I'm keeping this one!", "Crazy for this goat!", "Wouldn't he be cute in a coat?", "Can I get a trampoline??", "[swoon!]"]
 
     @caption = @captiongallery.sample
 

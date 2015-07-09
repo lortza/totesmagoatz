@@ -24,6 +24,84 @@ body {
   clear: both;
 }
 
+/*.ribbon {
+  font-size: 70%;
+  color: white;
+  background-color: lightblue;
+  padding: 5px 0px;
+  margin: 80px 0px -70px 0px;
+  -moz-box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  -webkit-box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  -ms-transform: rotate(3deg); 
+  -webkit-transform: rotate(3deg); 
+  transform: rotate(3deg);
+}*/
+
+/* RIBBON */
+.ribbon {
+ font-size: 24px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+    
+ position: relative;
+ background: #ba89b6;
+ color: #fff;
+ text-align: center;
+ padding: .5em .5em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+ -moz-text-shadow:2px 2px 5px rgba(0,0,0,0.4);
+  -webkit-text-shadow:2px 2px 5px rgba(0,0,0,0.4);
+  text-shadow:2px 2px 5px rgba(0,0,0,0.4);
+ -moz-box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  -webkit-box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #986794;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+ -moz-box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  -webkit-box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+  box-shadow:10px 10px 20px rgba(0,0,0,0.6);
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+.tag {
+  font-size: 16px;
+}
+
+/* Site Structure */
+
  .imgholder {
   width: 300px;
   height: 300px;
@@ -66,10 +144,35 @@ body {
 
 .caption {
   width: 75%;
-  margin: -5px 5px 0px 10px;
+  margin: -10px 5px 0px 10px;
   text-align: left;
-  font-size: 1.25em;
+  font-size: 1.5em;
   line-height: 100%;
   font-family: 'Permanent Marker', cursive;
   color: #000F55;
 }
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+
+.button {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.15em;
+  padding: 12px 25px;
+  background-color: #804f7c;
+  border-radius: 10px;
+  -moz-text-shadow:2px 2px 5px rgba(0,0,0,0.4);
+  -webkit-text-shadow:2px 2px 5px rgba(0,0,0,0.4);
+  text-shadow:2px 2px 5px rgba(0,0,0,0.4);
+  -moz-box-shadow:8px 8px 20px rgba(0,0,0,0.4);
+  -webkit-box-shadow:8px 8px 20px rgba(0,0,0,0.4);
+  box-shadow:8px 8px 20px rgba(0,0,0,0.4);
+
+
+}
+
