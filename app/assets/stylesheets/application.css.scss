@@ -160,7 +160,22 @@ a:visited {
   -moz-box-shadow:8px 8px 20px rgba(0,0,0,0.4);
   -webkit-box-shadow:8px 8px 20px rgba(0,0,0,0.4);
   box-shadow:8px 8px 20px rgba(0,0,0,0.4);
+}
 
-
+.credits {
+  float: left; 
+  width: 150px; 
+  background-color: #e8c065; 
+  padding: 5px 10px; 
+  border-radius: 0px 15px 15px 0px; 
+  margin-left: -15px; 
+  margin-right: -150px; 
+  margin-bottom: 20px;
+  box-shadow:8px 8px 20px rgba(0,0,0,0.4);
+  -moz-box-shadow:8px 8px 20px rgba(0,0,0,0.4);
+  -webkit-box-shadow:8px 8px 20px rgba(0,0,0,0.4);
+  -moz-text-shadow:2px 2px 5px rgba(0,0,0,0.4);
+  -webkit-text-shadow:2px 2px 5px rgba(0,0,0,0.4);
+  text-shadow:2px 2px 5px rgba(0,0,0,0.4);
 }
 
