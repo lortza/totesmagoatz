@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
-#heroku
-gem 'pg'
-gem 'rails_12factor'
+ruby '2.2.4'
+gem 'rails', '4.2.10'
 
-ruby '2.2.1'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+#heroku
+gem 'pg', '0.21'
+gem 'rails_12factor'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -46,6 +45,5 @@ group :development, :test do
   gem 'spring'
 
   # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+  gem 'sqlite3'
 end
-
